@@ -31,8 +31,9 @@ Interactive web dashboard:
 	•	Pie chart visualization
 
 📸 Dashboard
-Add your screenshot here:
+Create a folder named screenshots and save your dashboard screenshot as:
 screenshots/dashboard.png
+Then uncomment the line below:
 ![Dashboard](screenshots/dashboard.png)
 
 🛠 Tech Stack
@@ -68,7 +69,7 @@ pip install -r requirements.txt
 	2	Enable Gmail API
 	3	Create OAuth Desktop Application
 	4	Download credentials.json
-	5	Place credentials.json in project root
+	5	Place credentials.json in the project root directory
 Example:
 gmail-ai-cleaner/
 ├── credentials.json
@@ -116,7 +117,6 @@ Version 2.0
 	•	Advanced Rules Engine
 Version 3.0
 	•	AI Classification
-	•	OpenAI Integration
 	•	Email Summarization
 	•	Daily Digest Report
 Version 4.0
