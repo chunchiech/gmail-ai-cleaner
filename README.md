@@ -1,14 +1,8 @@
 # 📧 Gmail AI Cleaner
 
-A Gmail automation tool built with Python, Gmail API, and Streamlit.
+Open-source Gmail productivity tool built with Python, Gmail API, and Streamlit.
 
-Automatically classifies emails into:
-
-* 🚫 Spam
-* 📰 Newsletter
-* ✅ Important
-
-and applies Gmail labels automatically.
+Automatically classifies emails into Spam, Newsletter, and Important categories, applies Gmail labels, and provides an interactive dashboard for inbox management.
 
 ---
 
@@ -22,11 +16,11 @@ and applies Gmail labels automatically.
 
 ### 📬 Gmail Integration
 
-* Gmail API integration
-* OAuth2 authentication
-* Secure access to Gmail account
+* Gmail API Integration
+* OAuth2 Authentication
+* Secure Gmail Access
 
-### 🏷 Auto Labeling
+### 🏷 Automatic Labels
 
 Automatically creates and manages:
 
@@ -36,32 +30,43 @@ Automatically creates and manages:
 
 ### 🧠 Email Classification
 
-Rule-based classification engine:
+Rule-based email classification:
 
-* Spam detection
-* Newsletter detection
-* Important email detection
+* 🚫 Spam Detection
+* 📰 Newsletter Detection
+* ✅ Important Email Detection
 
-### 🌐 Streamlit Dashboard
+### 🌐 Dashboard
 
-Interactive web dashboard:
+Interactive Streamlit dashboard:
 
-* Scan Gmail mailbox
-* Search emails
-* Filter by category
-* Email statistics
-* Pie chart visualization
+* Email Statistics
+* Category Distribution Chart
+* Search Functionality
+* Category Filtering
+* Classification Results
+* Spam Cleanup
+* Newsletter Archive
+* Dashboard Refresh
 
 ---
 
-## 🛠 Tech Stack
+## 🏗 Architecture
 
-* Python
-* Gmail API
-* Google OAuth2
-* Streamlit
-* Pandas
-* Plotly
+```mermaid
+flowchart LR
+
+    Gmail[Gmail Inbox]
+    API[Gmail API]
+    Classifier[Rule Classifier]
+    Labels[Gmail Labels]
+    Dashboard[Streamlit Dashboard]
+
+    Gmail --> API
+    API --> Classifier
+    Classifier --> Labels
+    Labels --> Dashboard
+```
 
 ---
 
@@ -74,6 +79,7 @@ gmail-ai-cleaner/
 ├── gmail_cleaner.py
 ├── spam_rules.py
 ├── label_helper.py
+├── actions.py
 ├── requirements.txt
 ├── README.md
 └── screenshots/
@@ -84,11 +90,17 @@ gmail-ai-cleaner/
 
 ## ⚙️ Installation
 
+Clone the repository:
+
 ```bash
 git clone https://github.com/chunchiech/gmail-ai-cleaner.git
 
 cd gmail-ai-cleaner
+```
 
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
@@ -96,30 +108,45 @@ pip install -r requirements.txt
 
 ## 🔑 Gmail API Setup
 
+Before running Gmail AI Cleaner:
+
 1. Create a Google Cloud Project
 2. Enable Gmail API
-3. Create OAuth Desktop Application
+3. Create an OAuth Desktop Application
 4. Download `credentials.json`
-5. Place it in the project root
+5. Place it in the project root directory
 
 Example:
 
 ```text
 gmail-ai-cleaner/
+
 ├── credentials.json
 ├── app.py
 └── ...
 ```
 
+On first launch, Google Login will open automatically.
+
+After successful authorization:
+
+```text
+token.json
+```
+
+will be generated automatically.
+
 ---
 
 ## ▶️ Run
+
+Launch the dashboard:
 
 ```bash
 streamlit run app.py
 ```
 
-Open browser:
+Open:
 
 ```text
 http://localhost:8501
@@ -127,7 +154,7 @@ http://localhost:8501
 
 ---
 
-## 📊 Example Output
+## 📊 Example Results
 
 ```text
 Spam: 2
@@ -135,7 +162,7 @@ Newsletter: 2
 Important: 16
 ```
 
-Generated Labels:
+Generated Gmail Labels:
 
 ```text
 AI-Spam
@@ -147,7 +174,7 @@ AI-Important
 
 ## 🔒 Security
 
-Never commit:
+Do NOT commit:
 
 ```text
 credentials.json
@@ -169,31 +196,45 @@ __pycache__/
 
 ## 🗺 Roadmap
 
-### v1.0
+### v1.0.0
 
 * [x] Gmail API Integration
 * [x] OAuth Authentication
 * [x] Email Classification
-* [x] Gmail Labels
+* [x] Gmail Label Automation
 * [x] Streamlit Dashboard
+* [x] Statistics Dashboard
+* [x] Search & Filtering
 
-### v1.1
+### v1.1.0
 
-* [ ] Spam Cleanup Button
-* [ ] Newsletter Archive
-* [ ] Processed Email Tracking
+* [x] Spam Cleanup
+* [x] Newsletter Archive
 
-### v2.0
+### v1.2.0
 
-* [ ] AI Classification
+* [ ] AI-Processed Label
+* [ ] Scan New Emails Only
+
+### v2.0.0
+
+* [ ] AI Email Classification
 * [ ] Email Summarization
 * [ ] Daily Digest Report
 
-### v3.0
+### v3.0.0
 
 * [ ] Docker Support
 * [ ] GitHub Actions Automation
 * [ ] Streamlit Cloud Deployment
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and feature requests are welcome.
+
+Feel free to open an issue or submit a pull request.
 
 ---
 
