@@ -12,13 +12,19 @@ and applies Gmail labels automatically.
 
 ---
 
+## 📸 Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
 ## 🚀 Features
 
 ### 📬 Gmail Integration
 
 * Gmail API integration
 * OAuth2 authentication
-* Secure access to personal Gmail account
+* Secure access to Gmail account
 
 ### 🏷 Auto Labeling
 
@@ -41,31 +47,10 @@ Rule-based classification engine:
 Interactive web dashboard:
 
 * Scan Gmail mailbox
-* View classification results
 * Search emails
 * Filter by category
 * Email statistics
 * Pie chart visualization
-
----
-
-## 📸 Dashboard
-
-> Create a folder named `screenshots` and save your dashboard screenshot as:
-
-```text
-screenshots/dashboard.png
-```
-
-Then uncomment the line below:
-
-```markdown
-![Dashboard](screenshots/dashboard.png)
-```
-
-<!--
-![Dashboard](screenshots/dashboard.png)
--->
 
 ---
 
@@ -99,17 +84,11 @@ gmail-ai-cleaner/
 
 ## ⚙️ Installation
 
-Clone repository:
-
 ```bash
 git clone https://github.com/chunchiech/gmail-ai-cleaner.git
 
 cd gmail-ai-cleaner
-```
 
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
 ```
 
@@ -121,7 +100,7 @@ pip install -r requirements.txt
 2. Enable Gmail API
 3. Create OAuth Desktop Application
 4. Download `credentials.json`
-5. Place `credentials.json` in the project root directory
+5. Place it in the project root
 
 Example:
 
@@ -134,9 +113,7 @@ gmail-ai-cleaner/
 
 ---
 
-## ▶️ Run Application
-
-Launch Streamlit dashboard:
+## ▶️ Run
 
 ```bash
 streamlit run app.py
@@ -158,7 +135,7 @@ Newsletter: 2
 Important: 16
 ```
 
-Labels created automatically:
+Generated Labels:
 
 ```text
 AI-Spam
@@ -170,7 +147,7 @@ AI-Important
 
 ## 🔒 Security
 
-The following files should NEVER be committed:
+Never commit:
 
 ```text
 credentials.json
@@ -178,7 +155,7 @@ token.json
 .env
 ```
 
-Example `.gitignore`:
+Recommended `.gitignore`:
 
 ```gitignore
 credentials.json
@@ -192,7 +169,7 @@ __pycache__/
 
 ## 🗺 Roadmap
 
-### Version 1.0
+### v1.0
 
 * [x] Gmail API Integration
 * [x] OAuth Authentication
@@ -200,33 +177,23 @@ __pycache__/
 * [x] Gmail Labels
 * [x] Streamlit Dashboard
 
-### Version 2.0
+### v1.1
 
-* [ ] One-click Spam Cleanup
+* [ ] Spam Cleanup Button
 * [ ] Newsletter Archive
 * [ ] Processed Email Tracking
-* [ ] Advanced Rules Engine
 
-### Version 3.0
+### v2.0
 
 * [ ] AI Classification
 * [ ] Email Summarization
 * [ ] Daily Digest Report
 
-### Version 4.0
+### v3.0
 
-* [ ] Docker Deployment
+* [ ] Docker Support
 * [ ] GitHub Actions Automation
 * [ ] Streamlit Cloud Deployment
-* [ ] Multi-Account Support
-
----
-
-## 🤝 Contributing
-
-Pull requests and suggestions are welcome.
-
-Feel free to open issues for feature requests or bug reports.
 
 ---
 
