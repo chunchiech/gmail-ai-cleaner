@@ -32,6 +32,7 @@ NEWSLETTER_WORDS = [
     "電子報"
 ]
 
+
 def classify_email(subject):
 
     s = subject.lower()
