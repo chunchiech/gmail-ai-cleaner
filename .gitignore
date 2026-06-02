@@ -1,4 +1,6 @@
-token.json
 credentials.json
-venv/
+client_secret*.json
+token.json
 .env
+venv/
+__pycache__/
